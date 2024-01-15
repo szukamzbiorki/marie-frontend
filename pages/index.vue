@@ -1,5 +1,6 @@
 <template>
   <div class="wrapper">
+    <LayoutHeader></LayoutHeader>
     <div class="grid">
       <div v-for="(p, i) in data.projects" class="item">
         <div class="top">

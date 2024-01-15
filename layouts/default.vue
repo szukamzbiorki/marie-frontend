@@ -13,7 +13,6 @@
 
 <template>
   <div :class="['layout', { ready }]">
-    <LayoutHeader></LayoutHeader>
     <slot />
     <!-- <LayoutFooter></LayoutFooter> -->
   </div>
