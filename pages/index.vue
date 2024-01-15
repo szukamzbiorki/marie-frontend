@@ -3,8 +3,10 @@
     <div class="grid">
       <div v-for="(p, i) in data.projects" class="item">
         <div class="top">
-          <div class="title">{{ p.title }}</div>
-          <div class="year">{{ p.year }}</div>
+          <div class="ani">
+            <div class="title">{{ p.title }}</div>
+            <div class="year">{{ p.year }}</div>
+          </div>
           <div class="desc">{{ p.description }}</div>
         </div>
         <div class="bot">
@@ -58,7 +60,16 @@
     grid-column: 1/-1;
     grid-row: 1/2;
     cursor: default;
-    transition: grid-template-rows 0.3s ease;
+    transition: grid-template-rows 0.3s ease-in-out;
+    & > .ani {
+      grid-column: 1/-1;
+      display: flex;
+      flex-direction: row;
+      & > .title {
+        transition: min-width 0.3s ease-in-out;
+        min-width: 3px;
+      }
+    }
 
     & > .desc {
       grid-column: 1 / span 4;
@@ -68,6 +79,15 @@
 
     &:hover {
       grid-template-rows: auto 1fr;
+
+      & > .ani {
+        display: flex;
+        flex-direction: row;
+        & > .title {
+          min-width: calc((100vw - 2 * var(--space-m)) / 12 * 4);
+          /* min-width: 300px; */
+        }
+      }
     }
   }
 
@@ -82,43 +102,5 @@
       background: linear-gradient(-90deg, #ffffffff, #00000000);
       z-index: 4;
     }
-  }
-
-  .title {
-    grid-column: span 4;
-  }
-
-  .image {
-    grid-column: 1/7;
-    grid-row: 2/-1;
-  }
-
-  .info {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: var(--space-m);
-  }
-
-  .content {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-m);
-    grid-template-rows: auto auto;
-  }
-
-  .content > div {
-    grid-column: span 3;
-  }
-
-  .description {
-    grid-column: 1/-1 !important;
   }
 </style>
