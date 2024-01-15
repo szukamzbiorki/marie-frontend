@@ -24,7 +24,9 @@
     layout: 'default',
   })
 
-  useHead({})
+  useHead({
+    title: 'About',
+  })
   useSeoMeta({})
 </script>
 

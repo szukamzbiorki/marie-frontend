@@ -4,6 +4,7 @@
   const { data } = await useAsyncData(() => sanity.fetch(query))
 
   const { mobile } = useScreenSize()
+  const ready = ref(false)
   onMounted(async () => {
     await document.fonts.ready
     ready.value = true
@@ -11,9 +12,8 @@
 </script>
 
 <template>
-  <div :style="`--header: ${headersize}`" :class="['layout', { ready }]">
-    <!-- <LayoutHeaderNew v-if="!mobile" :logo="data.logo"></LayoutHeaderNew>
-    <LayoutHeaderMobile v-else :logo="data.logo"></LayoutHeaderMobile> -->
+  <div :class="['layout', { ready }]">
+    <LayoutHeader></LayoutHeader>
     <slot />
     <!-- <LayoutFooter></LayoutFooter> -->
   </div>

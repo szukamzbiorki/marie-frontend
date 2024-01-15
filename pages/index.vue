@@ -1,19 +1,16 @@
 <template>
   <div class="wrapper">
-    <div class="brev">
-      <a href="mailto:mariegertsen1@gmail.com">EMAIL ME!</a>
-      <!-- <img src="lillebrev.png" alt="" /> -->
-    </div>
-
-    <div class="navn">Marie Gertsen</div>
-
     <div class="grid">
-      <div class="item">
-        <div class="textbox">
-          <div class="titel">This Book Is Going Somewhere!</div>
-          <div class="year">2022</div>
+      <div v-for="(p, i) in data.projects" class="item">
+        <div class="top">
+          <div class="title">{{ p.title }}</div>
+          <div class="year">{{ p.year }}</div>
+          <div class="desc">{{ p.description }}</div>
         </div>
-        <!-- <div class="image"><img src="book.png" alt="" /></div> -->
+        <div class="bot">
+          <Carousel :content="p"></Carousel>
+          <div class="gradient"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -21,6 +18,12 @@
 
 <script setup>
   const { mobile } = useScreenSize()
+
+  const query = groq`{
+    "projects": *[_type == "project" && show == true]| order(orderRank),
+    }`
+  const sanity = useSanity()
+  const { data } = await useAsyncData(() => sanity.fetch(query))
 
   definePageMeta({
     layout: 'default',
@@ -43,19 +46,45 @@
   .item {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: var(--space-m);
+    gap: 0 var(--space-m);
     grid-template-rows: auto auto;
     background-color: white;
   }
 
-  .textbox {
+  .top {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 0fr;
     grid-column: 1/-1;
     grid-row: 1/2;
+    cursor: default;
+    transition: grid-template-rows 0.3s ease;
+
+    & > .desc {
+      grid-column: 1 / span 4;
+      grid-row: 2/-1;
+      overflow: hidden;
+    }
+
+    &:hover {
+      grid-template-rows: auto 1fr;
+    }
   }
 
-  .titel {
+  .bot {
+    position: relative;
+    & > .gradient {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: var(--grad);
+      background: linear-gradient(-90deg, #ffffffff, #00000000);
+      z-index: 4;
+    }
+  }
+
+  .title {
     grid-column: span 4;
   }
 
