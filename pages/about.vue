@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="info">
-      <div class="em"></div>
+      <NuxtLink to="/" class="name">Back</NuxtLink>
       <div class="content">
         <div class="div">This is all the info</div>
         <div class="div">In a grid wow</div>
