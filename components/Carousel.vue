@@ -75,7 +75,7 @@
     margin-right: var(--space-m);
 
     & > .swiperimg {
-      height: 40vw;
+      height: 50vh;
     }
   }
 </style>

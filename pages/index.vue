@@ -5,14 +5,14 @@
       <div v-for="(p, i) in data.projects" class="item">
         <div class="top">
           <div class="ani">
-            <div class="title">{{ p.title }}<span>, </span></div>
+            <div class="title">{{ p.title }}<span>,&nbsp;</span></div>
             <div class="year">{{ p.year }}</div>
             <div class="client">{{ p.client }}</div>
           </div>
           <div class="desc">{{ p.description }}</div>
         </div>
         <div class="bot">
-          <Carousel :content="p"></Carousel>
+          <LazyCarousel :content="p"></LazyCarousel>
           <div class="gradient"></div>
         </div>
       </div>
