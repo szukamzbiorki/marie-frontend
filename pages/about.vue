@@ -3,14 +3,11 @@
     <div class="info">
       <NuxtLink to="/" class="name">Back</NuxtLink>
       <div class="content">
-        <div class="div">This is all the info</div>
-        <div class="div">In a grid wow</div>
-        <div class="div">heyyaayyeyeh</div>
+        <div class="div">Marie Gertsen</div>
+        <div class="div">1978, Copenhagen</div>
+        <div class="div">mariegertsen@gmail.com</div>
         <div class="description">
-          SHOW ME YOUR BOOBS!!! SHOW ME YOUR BOOBS!!!SHOW ME YOUR BOOBS!!! SHOW
-          ME YOUR BOOBS!!!SHOW ME YOUR BOOBS!!!SHOW ME YOUR BOOBS!!!SHOW ME YOUR
-          BOOBS!!!SHOW ME YOUR BOOBS!!!SHOW ME YOUR BOOBS!!!SHOW ME YOUR
-          BOOBS!!!SHOW ME YOUR BOOBS!!!SHOW ME YOUR BOOBS!!!
+          {{ data.about.about }}
         </div>
       </div>
     </div>
@@ -19,6 +16,12 @@
 
 <script setup>
   const { mobile } = useScreenSize()
+
+  const query = groq`{
+    "about": *[_type == "about"][0],
+    }`
+  const sanity = useSanity()
+  const { data } = await useAsyncData(() => sanity.fetch(query))
 
   definePageMeta({
     layout: 'default',
@@ -90,6 +93,8 @@
   }
 
   .description {
-    grid-column: 1/-1 !important;
+    grid-column: span 6 !important;
+    grid-row: 2 / span 1;
+    white-space: pre-wrap;
   }
 </style>
