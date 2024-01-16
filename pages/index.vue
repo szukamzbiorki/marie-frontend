@@ -1,6 +1,7 @@
 <template>
   <div class="wrapper">
     <LayoutHeader></LayoutHeader>
+    <!-- {{ idle }} {{ idledFor }} -->
     <div class="grid">
       <div v-for="(p, i) in data.projects" class="item">
         <div class="top">
@@ -33,7 +34,7 @@
     layout: 'default',
   })
 
-  new BugController({ minBugs: 4, maxBugs: 7, mouseOver: 'fly' })
+  new BugController({ minBugs: 4, maxBugs: 6, mouseOver: 'fly' })
 
   useHead({})
   useSeoMeta({})
