@@ -21,6 +21,12 @@ export default defineNuxtConfig({
     },
     head: {
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+      script: [
+        {
+          src: '/bugs/bug-min.js',
+          // body: true,
+        },
+      ],
     },
   },
   sanity: {
