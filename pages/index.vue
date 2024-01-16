@@ -33,7 +33,7 @@
     layout: 'default',
   })
 
-  new BugController({ minBugs: 4, maxBugs: 7, mouseOver: 'flyoff' })
+  new BugController({ minBugs: 4, maxBugs: 7, mouseOver: 'fly' })
 
   useHead({})
   useSeoMeta({})
