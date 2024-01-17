@@ -4,7 +4,7 @@
       ><span class="about">About&nbsp;</span>Marie Gertsen</NuxtLink
     >
 
-    <div class="position">Thanks for connecting from {{ results }}</div>
+    <!-- <div class="position">Thanks for connecting from {{ results }}</div> -->
   </div>
 </template>
 
@@ -27,7 +27,7 @@
       range: '0',
     },
     headers: {
-      'X-RapidAPI-Key': 'd87f36c547msh843540dedf3087cp1fb3fdjsnb597fe239f81',
+      'X-RapidAPI-Key': '26571bd663msh0af9019d3c4e4f0p1274ddjsn61d4a9971333',
       'X-RapidAPI-Host': 'geocodeapi.p.rapidapi.com',
     },
   }
@@ -38,10 +38,7 @@
     error: er,
     refresh,
   } = await useAsyncData('mountains', () =>
-    $fetch(
-      'https://api.tomtom.com/search/2/reverseGeocode/52.157831,5.223776.json?key={Your_API_Key}&radius=100',
-      options
-    )
+    $fetch('https://geocodeapi.p.rapidapi.com/GetNearestCities', options)
   )
 
   const idledFor = computed(() =>
