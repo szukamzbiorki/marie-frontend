@@ -4,8 +4,8 @@
       <NuxtLink to="/" class="name">Back</NuxtLink>
       <div class="content">
         <div class="div">Marie Gertsen</div>
-        <div class="div">1978, Copenhagen</div>
-        <div class="div">mariegertsen@gmail.com</div>
+        <div class="div">1996, Copenhagen</div>
+        <div class="div">{{ data.about.email }}</div>
         <div class="description">
           {{ data.about.about }}
         </div>
