@@ -5,7 +5,9 @@
       <div class="content">
         <div class="div">Marie Gertsen</div>
         <div class="div">1996, Copenhagen</div>
-        <div class="div">{{ data.about.email }}</div>
+        <a class="div" :href="`mailto:${data.about.email}`">{{
+          data.about.email
+        }}</a>
         <div class="description">
           {{ data.about.about }}
         </div>
