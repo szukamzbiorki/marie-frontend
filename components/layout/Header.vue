@@ -56,6 +56,8 @@
       display: inline-block;
       display: flex;
       flex-direction: row;
+      z-index: 900;
+      position: relative;
       & > .about {
         display: inline-block;
         max-width: 0px;
