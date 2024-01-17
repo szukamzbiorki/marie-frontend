@@ -74,6 +74,10 @@
     width: auto;
     margin-right: var(--space-m);
 
+    &:last-child {
+      margin-right: 20vw;
+    }
+
     & > .swiperimg {
       height: 50vh;
     }
