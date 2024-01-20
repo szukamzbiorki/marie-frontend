@@ -123,7 +123,7 @@
               }
             }
             & > .year {
-              min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
+              min-width: calc((100vw - 2 * var(--space-m)) / 12 * 1);
             }
 
             & > .client {
