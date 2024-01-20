@@ -8,6 +8,5 @@ export default function () {
   const mobile = breakpoints.smaller('tablet')
   const tablet = breakpoints.between('tablet', 'laptop')
   const desktop = breakpoints.greater('laptop')
-
   return { mobile, tablet, desktop }
 }

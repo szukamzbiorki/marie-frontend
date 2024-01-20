@@ -20,7 +20,9 @@
 </template>
 
 <script setup>
-  const { mobile } = useScreenSize
+  const { mobile } = useScreenSize()
+
+  console.log(mobile)
   const props = defineProps({
     content: Object,
   })
