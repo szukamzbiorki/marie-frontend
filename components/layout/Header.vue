@@ -18,29 +18,6 @@
 
   const { coords, locatedAt, error } = useGeolocation()
 
-  // const options = {
-  //   method: 'GET',
-  //   url: 'https://geocodeapi.p.rapidapi.com/GetNearestCities',
-  //   params: {
-  //     latitude: coords.latitude,
-  //     longitude: coords.longitude,
-  //     range: '0',
-  //   },
-  //   headers: {
-  //     'X-RapidAPI-Key': '26571bd663msh0af9019d3c4e4f0p1274ddjsn61d4a9971333',
-  //     'X-RapidAPI-Host': 'geocodeapi.p.rapidapi.com',
-  //   },
-  // }
-
-  // const {
-  //   results,
-  //   pending,
-  //   error: er,
-  //   refresh,
-  // } = await useAsyncData('mountains', () =>
-  //   $fetch('https://geocodeapi.p.rapidapi.com/GetNearestCities', options)
-  // )
-
   const idledFor = computed(() =>
     Math.floor((now.value - lastActive.value) / 1000)
   )
