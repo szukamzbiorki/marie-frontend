@@ -98,6 +98,7 @@
         overflow: hidden;
         color: grey;
         font-family: 'NHG', sans-serif;
+        white-space: pre-wrap;
       }
     }
     @media screen and (max-width: 600px) {
