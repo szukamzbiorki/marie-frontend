@@ -65,6 +65,8 @@
       grid-row: 1/2;
       cursor: default;
       transition: grid-template-rows 0.5s ease-in-out;
+      width: calc(100vw - 2 * (var(--space-m)));
+
       & > .ani {
         grid-column: 1/-1;
         display: flex;
@@ -98,27 +100,36 @@
         font-family: 'NHG', sans-serif;
       }
     }
-
-    &:hover {
+    @media screen and (max-width: 600px) {
       & > .top {
         grid-template-rows: auto 1fr;
+        & > .desc {
+          width: 100%;
+        }
+      }
+    }
+    @media (hover: hover) {
+      &:hover {
+        & > .top {
+          grid-template-rows: auto 1fr;
 
-        & > .ani {
-          display: flex;
-          flex-direction: row;
-          & > .title {
-            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
-            & > span {
-              opacity: 0;
+          & > .ani {
+            display: flex;
+            flex-direction: row;
+            & > .title {
+              min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
+              & > span {
+                opacity: 0;
+              }
             }
-          }
-          & > .year {
-            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
-          }
+            & > .year {
+              min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
+            }
 
-          & > .client {
-            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
-            opacity: 1;
+            & > .client {
+              min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
+              opacity: 1;
+            }
           }
         }
       }
@@ -127,6 +138,7 @@
 
   .bot {
     position: relative;
+    width: calc(100vw - 2 * (var(--space-m)));
     & > .gradient {
       position: absolute;
       right: 0;
@@ -135,6 +147,10 @@
       width: var(--grad);
       background: linear-gradient(-90deg, #ffffffff, #00000000);
       z-index: 4;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
     }
   }
 </style>

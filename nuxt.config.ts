@@ -40,18 +40,17 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@sidebase/nuxt-session',
   ],
-  // postcss: {
-  //   plugins: {
-  //     'postcss-preset-env': {
-  //       stage: 0,
-  //       features: {
-  //         'nesting-rules': false,
-  //       },
-  //       'postcss-nested': {},
-  //     },
-  //     'postcss-inherit': {},
-  //   },
-  // },
+  postcss: {
+    plugins: {
+      'postcss-preset-env': {
+        stage: 0,
+        features: {
+          'nesting-rules': false,
+        },
+        'postcss-nested': {},
+      },
+    },
+  },
   nitro: {
     preset: 'netlify',
   },

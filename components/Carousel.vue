@@ -1,6 +1,6 @@
 <template>
   <div :class="spaces.get(content.space)">
-    <div ref="swipe" class="swiper">
+    <div v-if="false" ref="swipe" class="swiper">
       <div class="swiper-wrapper">
         <div
           v-for="image in content.images"
@@ -11,10 +11,16 @@
         </div>
       </div>
     </div>
+    <div v-else-if="true" class="images">
+      <div v-for="image in content.images" :key="image._id" class="slide">
+        <Media class="swiperimg" :medium="image"></Media>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+  const { mobile } = useScreenSize
   const props = defineProps({
     content: Object,
   })
@@ -81,5 +87,11 @@
     & > .swiperimg {
       height: 50vh;
     }
+  }
+
+  .images {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
   }
 </style>
