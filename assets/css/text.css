@@ -1,16 +1,11 @@
 @font-face {
-  font-family: 'TNR';
-  src: url('/assets/TNR.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'TNR-Italic';
-  src: url('/assets/TNR-Italic.woff2') format('woff2');
-}
-
-@font-face {
   font-family: 'NHGMedium';
   src: url('/assets/HaasGrotDisp-65Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'NHG';
+  src: url('/assets/HaasGrotDisp-55Roman.otf') format('opentype');
 }
 
 :root {

@@ -90,10 +90,12 @@
       }
 
       & > .desc {
-        grid-column: 1 / span 4;
+        grid-column: 1 / -1;
+        width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
         grid-row: 2/-1;
         overflow: hidden;
         color: grey;
+        font-family: 'NHG', sans-serif;
       }
     }
 
@@ -105,17 +107,17 @@
           display: flex;
           flex-direction: row;
           & > .title {
-            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 4);
+            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
             & > span {
               opacity: 0;
             }
           }
           & > .year {
-            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 4);
+            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
           }
 
           & > .client {
-            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 4);
+            min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
             opacity: 1;
           }
         }
