@@ -97,7 +97,7 @@
         grid-row: 2/-1;
         overflow: hidden;
         color: grey;
-        font-family: 'NHG', sans-serif;
+        /* font-family: 'NHG', sans-serif; */
         white-space: pre-wrap;
       }
     }

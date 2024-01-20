@@ -8,6 +8,16 @@
   src: url('/assets/HaasGrotDisp-55Roman.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'J';
+  src: url('/assets/Jungka-Medium_A.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'P';
+  src: url('/assets/Pirelli Medium A.woff') format('woff');
+}
+
 :root {
   --type-s: 16px;
   --type-m: 25px;
@@ -25,7 +35,7 @@
 }
 
 * {
-  font-family: 'NHG', sans-serif;
+  font-family: 'P', sans-serif;
 }
 
 a {
