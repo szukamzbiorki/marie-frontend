@@ -1,6 +1,6 @@
 <template>
   <div :class="spaces.get(content.space)">
-    <div v-if="false" ref="swipe" class="swiper">
+    <div v-if="!mobile" ref="swipe" class="swiper">
       <div class="swiper-wrapper">
         <div
           v-for="image in content.images"
@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <div v-else-if="true" class="images">
+    <div v-else-if="mobile" class="images">
       <div v-for="image in content.images" :key="image._id" class="slide">
         <Media class="swiperimg" :medium="image"></Media>
       </div>
