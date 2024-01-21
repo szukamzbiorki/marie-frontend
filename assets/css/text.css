@@ -9,13 +9,21 @@
 }
 
 @font-face {
-  font-family: 'J';
+  font-family: 'J-A';
   src: url('/assets/Jungka-Medium_A.woff') format('woff');
+}
+@font-face {
+  font-family: 'J-B';
+  src: url('/assets/Jungka-Medium_B.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'P';
-  src: url('/assets/Pirelli Medium A.woff') format('woff');
+  font-family: 'P-A';
+  src: url('/assets/Pirelli-Medium_A.woff') format('woff');
+}
+@font-face {
+  font-family: 'P-B';
+  src: url('/assets/Pirelli-Medium_B.woff') format('woff');
 }
 
 :root {
@@ -35,7 +43,7 @@
 }
 
 * {
-  font-family: 'P', sans-serif;
+  font-family: 'P-A', 'P-B', sans-serif;
 }
 
 a {
