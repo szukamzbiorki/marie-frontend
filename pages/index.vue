@@ -7,13 +7,18 @@
         <div class="ani">
           <div class="title">{{ p.title }}<span>,&nbsp;</span></div>
           <div class="year">{{ p.year }}</div>
-          <div v-if="p.client" class="client">{{ p.client }}</div>
+          <div v-if="p.client & !mobile" class="client">{{ p.client }}</div>
         </div>
         <div class="carousel">
           <LazyCarousel class="caru" :content="p"></LazyCarousel>
           <div class="gradient"></div>
         </div>
-        <div class="desc">{{ p.description }}</div>
+        <div class="desc">
+          <div v-if="p.client && mobile" class="client">{{ p.client }}</div>
+          <div>
+            {{ p.description }}
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -46,6 +51,10 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-m);
+  }
+
+  .client {
+    color: black !important;
   }
 
   .item {
