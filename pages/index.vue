@@ -96,7 +96,7 @@
     }
     & > .desc {
       grid-column: 1 / -1;
-      width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
+      width: calc((100vw - 2 * var(--space-m)) / 12 * 6);
       grid-row: 3/-1;
       overflow: hidden;
       color: grey;
