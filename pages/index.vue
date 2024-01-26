@@ -71,6 +71,15 @@
         grid-column: 1/-1;
         display: flex;
         flex-direction: row;
+        @media screen and (max-width: 600px) {
+          width: 100%;
+          justify-content: space-between;
+          & > .title {
+            & > span {
+              display: none;
+            }
+          }
+        }
         & > .title {
           transition: min-width 0.5s ease-in-out;
           min-width: 3px;
@@ -117,6 +126,7 @@
           & > .ani {
             display: flex;
             flex-direction: row;
+
             & > .title {
               min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
               & > span {

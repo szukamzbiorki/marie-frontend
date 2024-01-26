@@ -1,16 +1,20 @@
 <template>
   <div class="wrapper">
     <div class="info">
-      <NuxtLink to="/" class="name">Back</NuxtLink>
+      <NuxtLink to="/" class="back">Back</NuxtLink>
       <div class="content">
-        <div class="div">Marie Gertsen</div>
-        <div class="div">1996, Copenhagen</div>
-        <a class="div" :href="`mailto:${data.about.email}`">{{
+        <div class="name">Marie Gertsen</div>
+        <div class="birth">1996, Copenhagen</div>
+        <a class="email" :href="`mailto:${data.about.email}`">{{
           data.about.email
+        }}</a>
+        <a class="phone" :href="`tel:${data.about.phone}`">{{
+          data.about.phone
         }}</a>
         <div class="description">
           {{ data.about.about }}
         </div>
+        <Media class="image" :medium="data.about.image"></Media>
       </div>
     </div>
   </div>
@@ -81,6 +85,10 @@
     flex-direction: column;
     justify-content: space-between;
     padding: var(--space-m);
+    @media screen and (max-width: 600px) {
+      justify-content: flex-start;
+      gap: 100px;
+    }
   }
 
   .content {
@@ -88,15 +96,47 @@
     grid-template-columns: repeat(12, 1fr);
     gap: var(--space-m);
     grid-template-rows: auto auto;
+    @media screen and (max-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  .content > div {
+  .content > div,
+  a {
     grid-column: span 3;
+    @media screen and (max-width: 600px) {
+      grid-column: span 1;
+    }
+  }
+
+  .birth,
+  .phone {
+    @media screen and (max-width: 600px) {
+      justify-self: self-end;
+    }
   }
 
   .description {
     grid-column: span 6 !important;
-    grid-row: 2 / span 1;
+    @media screen and (max-width: 600px) {
+      grid-column: span 2 !important;
+    }
     white-space: pre-wrap;
+  }
+
+  .image {
+    grid-column: span 6 !important;
+    @media screen and (max-width: 600px) {
+      grid-column: span 2 !important;
+    }
+    grid-row: 1 / span 1;
+    white-space: pre-wrap;
+  }
+
+  .name {
+    grid-column: 1 / span 3 !important;
+    @media screen and (max-width: 600px) {
+      grid-column: 1 / span 1 !important;
+    }
   }
 </style>

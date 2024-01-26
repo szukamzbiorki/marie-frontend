@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ['~/assets/css/index.css'],
   site: {
-    // url: 'https://turnusik.info',
+    url: 'https://mariegertsen.com',
     name: 'Marie Gertsen',
     defaultLocale: 'en',
     identity: {
