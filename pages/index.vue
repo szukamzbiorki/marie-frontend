@@ -7,7 +7,7 @@
         <div class="ani">
           <div class="title">{{ p.title }}<span>,&nbsp;</span></div>
           <div class="year">{{ p.year }}</div>
-          <div class="client">{{ p.client }}</div>
+          <div v-if="p.client" class="client">{{ p.client }}</div>
         </div>
         <div class="carousel">
           <LazyCarousel class="caru" :content="p"></LazyCarousel>
@@ -52,7 +52,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--space-s) var(--space-m);
-    grid-template-rows: auto auto;
     background-color: white;
 
     grid-template-rows: auto auto 0fr;
@@ -61,13 +60,16 @@
     cursor: default;
     transition: grid-template-rows 0.5s ease-in-out;
     width: calc(100vw - 2 * (var(--space-m)));
+    @media screen and (max-width: 600px) {
+      margin-bottom: calc(3 * var(--space-m));
+    }
 
     & > .ani {
       grid-column: 1/-1;
       display: flex;
       flex-direction: row;
+      width: calc(100vw - 2 * (var(--space-m)));
       @media screen and (max-width: 600px) {
-        width: 100%;
         justify-content: space-between;
         & > .title {
           & > span {
@@ -124,9 +126,6 @@
           opacity: 1;
         }
         & > .ani {
-          display: flex;
-          flex-direction: row;
-
           & > .title {
             min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
             & > span {
