@@ -114,7 +114,7 @@
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
 
-      &:nth-of-type(1) {
+      & .swiper-slide-active {
         opacity: 1;
       }
     }
