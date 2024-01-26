@@ -113,10 +113,9 @@
     & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
       opacity: 0;
       transition: opacity 0.5s ease-in-out;
-
-      & .swiper-slide-active {
-        opacity: 1;
-      }
+    }
+    .swiper-slide-active {
+      opacity: 1 !important;
     }
     @media (hover: hover) {
       &:hover {
