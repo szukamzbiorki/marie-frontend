@@ -10,7 +10,7 @@
           <div class="client">{{ p.client }}</div>
         </div>
         <div class="carousel">
-          <LazyCarousel :content="p"></LazyCarousel>
+          <LazyCarousel class="caru" :content="p"></LazyCarousel>
           <div class="gradient"></div>
         </div>
         <div class="desc">{{ p.description }}</div>
@@ -38,7 +38,7 @@
   useSeoMeta({})
 </script>
 
-<style scoped>
+<style lang="postcss">
   .grid {
     margin-top: 10vh;
     padding: var(--space-m);
@@ -109,10 +109,21 @@
         width: calc((100vw - 2 * var(--space-m)));
       }
     }
+
+    & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+
+      &:nth-of-type(1) {
+        opacity: 1;
+      }
+    }
     @media (hover: hover) {
       &:hover {
         grid-template-rows: auto auto 1fr;
-
+        & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
+          opacity: 1;
+        }
         & > .ani {
           display: flex;
           flex-direction: row;
