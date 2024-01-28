@@ -11,11 +11,10 @@
         </div>
         <div class="carousel">
           <LazyCarousel class="caru" :content="p"></LazyCarousel>
-          <div class="gradient"></div>
         </div>
         <div class="desc">
           <div v-if="p.client && mobile" class="client">{{ p.client }}</div>
-          <div>
+          <div class="text">
             {{ p.description }}
           </div>
         </div>
@@ -51,6 +50,7 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-m);
+    overflow: hidden;
   }
 
   .client {
@@ -58,23 +58,19 @@
   }
 
   .item {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
     gap: var(--space-s) var(--space-m);
     background-color: white;
-
-    grid-template-rows: auto auto 0fr;
     grid-column: 1/-1;
     grid-row: 1/2;
     cursor: default;
-    transition: grid-template-rows 0.5s ease-in-out;
     width: calc(100vw - 2 * (var(--space-m)));
     @media screen and (max-width: 600px) {
       margin-bottom: calc(3 * var(--space-m));
     }
+    flex-direction: column;
 
     & > .ani {
-      grid-column: 1/-1;
       display: flex;
       flex-direction: row;
       width: calc(100vw - 2 * (var(--space-m)));
@@ -106,16 +102,21 @@
       }
     }
     & > .desc {
-      grid-column: 1 / -1;
       width: calc((100vw - 2 * var(--space-m)) / 12 * 6);
       grid-row: 3/-1;
       overflow: hidden;
       color: grey;
       /* font-family: 'NHG', sans-serif; */
       white-space: pre-wrap;
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.5s ease-in-out;
+      & > .text {
+        overflow: hidden;
+      }
     }
     @media screen and (max-width: 600px) {
-      grid-template-rows: auto auto 1fr;
+      grid-template-rows: 1fr;
       & > .desc {
         width: calc((100vw - 2 * var(--space-m)));
       }
@@ -130,10 +131,18 @@
     }
     @media (hover: hover) {
       &:hover {
-        grid-template-rows: auto auto 1fr;
-        & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
-          opacity: 1;
+        & > .carousel {
+          &:hover {
+            & > .caru > .swiper > .swiper-wrapper > .swiper-slide {
+              opacity: 1;
+            }
+          }
         }
+
+        & > .desc {
+          grid-template-rows: 1fr;
+        }
+
         & > .ani {
           & > .title {
             min-width: calc((100vw - 2 * var(--space-m)) / 12 * 3);
@@ -157,18 +166,10 @@
   .carousel {
     position: relative;
     width: calc(100vw - 2 * (var(--space-m)));
-    & > .gradient {
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: var(--grad);
-      background: linear-gradient(-90deg, #ffffffff, #00000000);
-      z-index: 4;
+    mask-image: linear-gradient(90deg, rgb(0 0 0 / 100%), 80%, transparent);
 
-      @media screen and (max-width: 600px) {
-        display: none;
-      }
+    @media screen and (max-width: 600px) {
+      mask-image: none;
     }
   }
 </style>
