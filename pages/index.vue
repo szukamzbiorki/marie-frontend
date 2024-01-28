@@ -83,20 +83,20 @@
         }
       }
       & > .title {
-        transition: min-width 0.5s ease-in-out;
+        transition: min-width 0.43s ease-in-out;
         min-width: 3px;
         & > span {
-          transition: opacity 0.5s ease-in-out;
+          transition: opacity 0.43s ease-in-out;
         }
       }
 
       & > .year {
-        transition: min-width 0.5s ease-in-out;
+        transition: min-width 0.43s ease-in-out;
         min-width: 3px;
       }
 
       & > .client {
-        transition: min-width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        transition: min-width 0.43s ease-in-out, opacity 0.43s ease-in-out;
         min-width: 3px;
         opacity: 0;
       }
@@ -110,7 +110,7 @@
       white-space: pre-wrap;
       display: grid;
       grid-template-rows: 0fr;
-      transition: grid-template-rows 0.5s ease-in-out;
+      transition: grid-template-rows 0.43s ease-in-out;
       & > .text {
         overflow: hidden;
       }
@@ -124,7 +124,7 @@
 
     & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
       opacity: 0;
-      transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.43s ease-in-out;
     }
     .swiper-slide-active {
       opacity: 1 !important;
