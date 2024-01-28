@@ -1,7 +1,6 @@
 <template>
   <div class="wrapper">
     <LayoutHeader></LayoutHeader>
-    <!-- {{ idle }} {{ idledFor }} -->
     <div class="grid">
       <div v-for="(p, i) in data.projects" class="item">
         <div class="ani">
@@ -123,7 +122,7 @@
     }
 
     & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
-      opacity: 0;
+      opacity: 1;
       transition: opacity 0.43s ease-in-out;
     }
     .swiper-slide-active {

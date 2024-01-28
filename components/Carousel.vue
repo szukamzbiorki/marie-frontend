@@ -35,34 +35,36 @@
     ['XL', '-m-b-xl'],
   ])
 
-  import Swiper from 'swiper'
-  import 'swiper/css'
-  import 'swiper/css/navigation'
+  // import Swiper from 'swiper'
+  // import 'swiper/css'
+  // import 'swiper/css/navigation'
 
-  const swipe = ref(null)
-  const swiper = ref()
-  const slideNumber = ref(1)
+  // const swipe = ref(null)
+  // const swiper = ref()
+  // const slideNumber = ref(1)
 
-  onMounted(() => {
-    swiper.value = new Swiper(swipe.value, {
-      grabCursor: true,
-      observer: true,
-      observeParents: true,
-      loop: false,
-      slidesPerView: 'auto',
-      on: {
-        slideChange: (swiper) => {
-          slideNumber.value = swiper.realIndex + 1
-        },
-      },
-    })
-  })
+  // onMounted(() => {
+  //   swiper.value = new Swiper(swipe.value, {
+  //     // grabCursor: true,
+  //     observer: true,
+  //     observeParents: true,
+  //     loop: true,
+  //     slidesPerView: 'auto',
+  //     mousewheel: true,
+  //     // edgeSwipeDetection: 'true',
+  //     on: {
+  //       slideChange: (swiper) => {
+  //         slideNumber.value = swiper.realIndex + 1
+  //       },
+  //     },
+  //   })
+  // })
 
-  onUnmounted(() => {
-    if (swiper.value) {
-      swiper.value.destroy()
-    }
-  })
+  // onUnmounted(() => {
+  //   if (swiper.value) {
+  //     swiper.value.destroy()
+  //   }
+  // })
 </script>
 
 <style lang="postcss" scoped>
@@ -75,6 +77,11 @@
     display: flex;
     box-sizing: border-box;
     padding-right: var(--grad);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 
   .swiper-slide {
