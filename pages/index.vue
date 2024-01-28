@@ -122,7 +122,7 @@
     }
 
     & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
-      opacity: 1;
+      opacity: 0;
       transition: opacity 0.43s ease-in-out;
     }
     .swiper-slide-active {
