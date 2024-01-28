@@ -165,7 +165,8 @@
   .carousel {
     position: relative;
     width: calc(100vw - 2 * (var(--space-m)));
-    mask-image: linear-gradient(90deg, rgb(0 0 0 / 100%), 80%, transparent);
+    /* mask-image: linear-gradient(90deg, rgb(0 0 0 / 100%), 80%, transparent); */
+    mask-image: none;
 
     @media screen and (max-width: 600px) {
       mask-image: none;
