@@ -4,7 +4,7 @@
       <div
         class="swiper-wrapper"
         @click="swiper.slideNext()"
-        @mouseenter="showCursor()"
+        @mouseover="showCursor()"
         @mouseleave="cursorShow = false"
       >
         <div
@@ -27,7 +27,7 @@
       class="cursor"
       :style="`top: ${y}px; left: ${x}px;`"
     >
-      <div class="counter">{{ slideNumber }}/{{ content.images.length }}</div>
+      <!-- <div class="counter">{{ slideNumber }}/{{ content.images.length }}</div> -->
       <div class="next">NEXT</div>
     </div>
   </div>
@@ -52,6 +52,7 @@
   import Swiper from 'swiper'
   import 'swiper/css'
   import 'swiper/css/navigation'
+  import { EffectFade } from 'swiper/modules'
 
   const swipe = ref(null)
   const swiper = ref()
@@ -65,11 +66,13 @@
 
   onMounted(() => {
     swiper.value = new Swiper(swipe.value, {
+      modules: [EffectFade],
       grabCursor: true,
       observer: true,
       observeParents: true,
       loop: true,
       slidesPerView: 'auto',
+      effect: 'fade',
       on: {
         slideChange: (swiper) => {
           slideNumber.value = swiper.realIndex + 1
@@ -135,7 +138,7 @@
     }
 
     & > .swiperimg {
-      height: 50vh;
+      height: 67vh;
     }
   }
 
