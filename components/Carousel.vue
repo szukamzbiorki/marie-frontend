@@ -4,8 +4,8 @@
       <div
         class="swiper-wrapper"
         @click="swiper.slideNext()"
-        @mouseover="showCursor()"
-        @mouseleave="cursorShow = false"
+        @mouseover="cursorShow = true"
+        @mouseout="cursorShow = false"
       >
         <div
           v-for="image in content.images"
