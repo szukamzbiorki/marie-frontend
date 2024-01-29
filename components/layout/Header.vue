@@ -3,7 +3,6 @@
     <NuxtLink to="/about" class="name"
       ><span class="about">About&nbsp;</span>Marie Gertsen</NuxtLink
     >
-
     <!-- <div class="position">Thanks for connecting from {{ results }}</div> -->
   </div>
 </template>
@@ -28,6 +27,7 @@
     position: fixed;
     top: 0;
     padding: var(--space-m);
+    z-index: 1100;
 
     & > .name {
       display: inline-block;

@@ -3,8 +3,6 @@
     <div class="info">
       <NuxtLink to="/" class="back">Back</NuxtLink>
       <div class="content">
-        <div class="name">Marie Gertsen</div>
-        <div class="birth">1996, Copenhagen</div>
         <a class="email" :href="`mailto:${data.about.email}`">{{
           data.about.email
         }}</a>
@@ -109,13 +107,6 @@
     }
   }
 
-  .birth,
-  .phone {
-    @media screen and (max-width: 600px) {
-      justify-self: self-end;
-    }
-  }
-
   .description {
     grid-column: span 6 !important;
     @media screen and (max-width: 600px) {
@@ -133,7 +124,7 @@
     white-space: pre-wrap;
   }
 
-  .name {
+  .email {
     grid-column: 1 / span 3 !important;
     @media screen and (max-width: 600px) {
       grid-column: 1 / span 1 !important;

@@ -42,6 +42,19 @@
 </script>
 
 <style lang="postcss">
+  .wrapper {
+    /* background-image: linear-gradient(
+        45deg,
+        var(--blueski) 25%,
+        transparent 25%
+      ),
+      linear-gradient(-45deg, var(--blueski) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #808080 75%),
+      linear-gradient(-45deg, transparent 75%, #808080 75%);
+    background-size: 10vw 30vw;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px; */
+    background-color: var(--blueski);
+  }
   .grid {
     margin-top: 10vh;
     padding: var(--space-m);
@@ -58,6 +71,8 @@
 
   .item {
     display: flex;
+    flex-direction: column;
+    padding: var(--space-s) 0 var(--space-s) var(--space-m);
     gap: var(--space-s) var(--space-m);
     background-color: white;
     grid-column: 1/-1;
@@ -66,8 +81,12 @@
     width: calc(100vw - 2 * (var(--space-m)));
     @media screen and (max-width: 600px) {
       margin-bottom: calc(3 * var(--space-m));
+      padding: 0;
     }
-    flex-direction: column;
+
+    &:nth-of-type(2n) {
+      /* background-color: rgb(152, 200, 255); */
+    }
 
     & > .ani {
       display: flex;
@@ -133,7 +152,7 @@
         & > .carousel {
           &:hover {
             & > .caru > .swiper > .swiper-wrapper > .swiper-slide {
-              opacity: 1;
+              opacity: 0;
             }
           }
         }

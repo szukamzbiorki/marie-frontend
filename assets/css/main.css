@@ -19,6 +19,7 @@ img {
   --green: #009444;
   --grey: #a7a9ac;
   --grad: 20vw;
+  --blueski: rgba(183, 217, 255, 0.459);
 }
 
 @media screen and (max-width: 600px) {

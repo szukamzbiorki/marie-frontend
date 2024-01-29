@@ -132,7 +132,6 @@
   .swiper-slide {
     width: auto;
     margin-right: var(--space-m);
-    background-color: white;
 
     &:last-child {
       margin-right: 20vw;
@@ -140,6 +139,7 @@
 
     & > .swiperimg {
       height: 67vh;
+      background-color: white;
     }
   }
 
