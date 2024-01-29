@@ -27,7 +27,7 @@
       class="cursor"
       :style="`top: ${y}px; left: ${x}px;`"
     >
-      <div class="counter">{{ slideNumber }} / {{ content.images.length }}</div>
+      <div class="counter">{{ slideNumber }}/{{ content.images.length }}</div>
       <div class="next">NEXT</div>
     </div>
   </div>
@@ -101,7 +101,7 @@
       background-color: white;
       padding: 0 2px;
       border: black 0.5px solid;
-      font-size: 80%;
+      font-size: 72%;
     }
   }
 
