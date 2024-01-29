@@ -194,6 +194,6 @@
   }
 
   .cipa {
-    height: 0;
+    height: 50vh;
   }
 </style>

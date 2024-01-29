@@ -108,7 +108,7 @@
   }
 
   .description {
-    grid-column: span 6 !important;
+    grid-column: 1 / span 6 !important;
     @media screen and (max-width: 600px) {
       grid-column: span 2 !important;
     }
