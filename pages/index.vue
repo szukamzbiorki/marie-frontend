@@ -9,7 +9,7 @@
           <div v-if="p.client & !mobile" class="client">{{ p.client }}</div>
         </div>
         <div class="carousel">
-          <LazyCarousel class="caru" :content="p"></LazyCarousel>
+          <Carousel class="caru" :content="p"></Carousel>
         </div>
         <div class="desc">
           <div v-if="p.client && mobile" class="client">{{ p.client }}</div>
@@ -18,6 +18,7 @@
           </div>
         </div>
       </div>
+      <div class="cipa"></div>
     </div>
   </div>
 </template>
@@ -143,6 +144,7 @@
     & > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
       opacity: 0;
       transition: opacity 0.43s ease-in-out;
+      background-color: white;
     }
     .swiper-slide-active {
       opacity: 1 !important;
@@ -189,5 +191,9 @@
     @media screen and (max-width: 600px) {
       mask-image: none;
     }
+  }
+
+  .cipa {
+    height: 0;
   }
 </style>
