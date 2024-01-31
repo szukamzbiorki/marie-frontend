@@ -15,8 +15,9 @@
             Credits
           </div>
           <div v-if="credits" class="credits">
-            Code: Bartek Pierściński<br />
-            Typeface: Jung-Lee Type Foundry
+            Code: <a href="https://bartekp.info">Bartek Pierściński</a
+            ><br />Typeface:
+            <a href="https://j-ltf.com">Jung-Lee Type Foundry</a>
           </div>
         </div>
         <Media class="image" :medium="data.about.image"></Media>
