@@ -11,15 +11,15 @@
 				}}</a>
 				<div class="description">
 					{{ data.about.about }}
-					<div @click="credits = true" v-if="!credits" class="credits">
-						Credits
-					</div>
-					<div v-if="credits" class="credits">
-						Code: <a href="https://bartekp.info">Bartek Pierściński</a
-						><br />Typeface:
-						<a href="https://j-ltf.com">Jung-Lee Type Foundry</a>
-					</div>
 				</div>
+				<span @click="credits = true" v-if="!credits" class="credits but"
+					>Credits</span
+				>
+				<span v-if="credits" class="credits"
+					>Code: <a href="https://bartekp.info">Bartek Pierściński</a
+					><br />Typeface: "Pirelli" by
+					<a href="https://j-ltf.com">Jung-Lee Type Foundry</a>
+				</span>
 				<Media class="image" :medium="data.about.image"></Media>
 			</div>
 		</div>
@@ -92,6 +92,7 @@
 		flex-direction: column;
 		justify-content: space-between;
 		padding: var(--space-m);
+
 		@media screen and (max-width: 600px) {
 			justify-content: flex-start;
 			gap: 100px;
@@ -103,6 +104,7 @@
 		grid-template-columns: repeat(12, 1fr);
 		gap: var(--space-m);
 		grid-template-rows: auto auto;
+
 		@media screen and (max-width: 600px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
@@ -111,6 +113,7 @@
 	.content > div,
 	a {
 		grid-column: span 3;
+
 		@media screen and (max-width: 600px) {
 			grid-column: span 1;
 		}
@@ -118,25 +121,50 @@
 
 	.description {
 		grid-column: 1 / span 6 !important;
+
 		@media screen and (max-width: 600px) {
 			grid-column: span 2 !important;
 		}
+
 		white-space: pre-wrap;
 	}
 
 	.image {
 		grid-column: span 6 !important;
+
 		@media screen and (max-width: 600px) {
 			grid-column: span 2 !important;
 		}
+
 		grid-row: 1 / span 1;
 		white-space: pre-wrap;
 	}
 
 	.email {
 		grid-column: 1 / span 3 !important;
+
 		@media screen and (max-width: 600px) {
 			grid-column: 1 / span 1 !important;
 		}
+	}
+
+	a {
+		text-decoration: underline;
+		color: black;
+	}
+
+	.but {
+		cursor: pointer;
+		text-decoration: underline;
+	}
+
+	.credits {
+		grid-column: 1 / span 6 !important;
+
+		@media screen and (max-width: 600px) {
+			grid-column: span 2 !important;
+		}
+
+		white-space: pre-wrap;
 	}
 </style>
