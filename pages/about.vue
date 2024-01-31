@@ -11,6 +11,13 @@
         }}</a>
         <div class="description">
           {{ data.about.about }}
+          <div @click="credits = true" v-if="!credits" class="credits">
+            Credits
+          </div>
+          <div v-if="credits" class="credits">
+            Code: Bartek Pierściński<br />
+            Typeface: Jung-Lee Type Foundry
+          </div>
         </div>
         <Media class="image" :medium="data.about.image"></Media>
       </div>

@@ -28,12 +28,10 @@
     top: 0;
     padding: var(--space-m);
     z-index: 1100;
-
     & > .name {
       display: inline-block;
       display: flex;
       flex-direction: row;
-      z-index: 900;
       position: relative;
       & > .about {
         display: inline-block;
