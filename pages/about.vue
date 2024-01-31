@@ -27,6 +27,7 @@
 
 <script setup>
   const { mobile } = useScreenSize()
+  const credits = ref(false)
 
   const query = groq`{
     "about": *[_type == "about"][0],
