@@ -39,7 +39,7 @@
 		flex-direction: column;
 		padding: var(--space-s) 0 var(--space-s) var(--space-m);
 		gap: var(--space-s) var(--space-m);
-		background-color: white;
+		background-color: var(--grey);
 		grid-column: 1/-1;
 		grid-row: 1/2;
 		cursor: default;
@@ -102,7 +102,7 @@
 		& > .carousel > .caru > .swiper > .swiper-wrapper > .swiper-slide {
 			opacity: 0;
 			transition: opacity 0.43s ease-in-out;
-			background-color: white;
+			background-color: var(--grey);
 		}
 		.swiper-slide-active {
 			opacity: 1 !important;

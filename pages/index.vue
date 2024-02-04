@@ -26,24 +26,12 @@
 
 <style lang="postcss">
 	.wrapper {
-		/* background-image: linear-gradient(
-        45deg,
-        var(--blueski) 25%,
-        transparent 25%
-      ),
-      linear-gradient(-45deg, var(--blueski) 25%, transparent 25%),
-      linear-gradient(45deg, transparent 75%, #808080 75%),
-      linear-gradient(-45deg, transparent 75%, #808080 75%);
-    background-size: 10vw 30vw;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px; */
-		/* mask-image: linear-gradient(90deg, rgb(0 0 0 / 100%), 80%, transparent); */
-		background-color: var(--blueski);
-		/* mask-mode: alpha; */
+		background-color: white;
 	}
 	.grid {
 		margin-top: 10vh;
 		padding: var(--space-m);
-		background-color: var(--grey);
+		background-color: white;
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-m);

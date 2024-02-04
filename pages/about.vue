@@ -16,9 +16,8 @@
 					>Credits</span
 				>
 				<span v-if="credits" class="credits"
-					>Code: <a href="https://bartekp.info">Bartek Pierściński</a
-					><br />Typeface: "Pirelli" by
-					<a href="https://j-ltf.com">Jung-Lee Type Foundry</a>
+					>Code: <a href="https://bartekp.info">Bartek Pierściński</a>
+					<!-- Typeface: "Pirelli" by<a href="https://j-ltf.com">Jung-Lee Type Foundry</a> -->
 				</span>
 				<Media class="image" :medium="data.about.image"></Media>
 			</div>
@@ -143,7 +142,7 @@
 		grid-column: 1 / span 3 !important;
 
 		@media screen and (max-width: 600px) {
-			grid-column: 1 / span 1 !important;
+			grid-column: 1 / span 2 !important;
 		}
 	}
 
