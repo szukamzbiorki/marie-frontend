@@ -1,12 +1,12 @@
 <template>
 	<div class="item">
+		<div class="carousel">
+			<Carousel class="caru" :content="p"></Carousel>
+		</div>
 		<div class="ani">
 			<div class="title">{{ p.title }}<span>,&nbsp;</span></div>
 			<div class="year">{{ p.year }}</div>
 			<div v-if="p.client && !mobile" class="client">{{ p.client }}</div>
-		</div>
-		<div class="carousel">
-			<Carousel class="caru" :content="p"></Carousel>
 		</div>
 		<div class="desc">
 			<div v-if="p.client && mobile" class="client">{{ p.client }}</div>
