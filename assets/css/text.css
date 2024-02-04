@@ -42,6 +42,11 @@
 	src: url('/assets/GrotesqueMTStd-Bold.otf') format('opentype');
 }
 
+@font-face {
+	font-family: 'century';
+	src: url('/assets/CenturySchoolbookStd.otf') format('opentype');
+}
+
 :root {
 	--type-s: 15px;
 	--type-m: 25px;
@@ -59,7 +64,7 @@
 }
 
 body {
-	font-family: 'Grot', sans-serif;
+	font-family: 'century', sans-serif;
 	font-size: var(--type-s);
 }
 
