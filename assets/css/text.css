@@ -39,7 +39,7 @@
 }
 
 :root {
-	--type-s: 14px;
+	--type-s: 15px;
 	--type-m: 25px;
 	--type-l: max(3.4vw, 35px);
 	--type-xl: 6vw;
