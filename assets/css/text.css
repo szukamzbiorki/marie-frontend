@@ -30,11 +30,16 @@
 @font-face {
 	font-family: 'Jakarta';
 	font-style: italic;
-	src: url('//assets/j/PlusJakartaSans-SemiBoldItalic.ttf') format('truetype');
+	src: url('/assets/j/PlusJakartaSans-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Selectric';
+	src: url('/assets/SelectricUniversOne-Book.otf') format('opentype');
 }
 
 :root {
-	--type-s: 16px;
+	--type-s: 14px;
 	--type-m: 25px;
 	--type-l: max(3.4vw, 35px);
 	--type-xl: 6vw;
@@ -49,8 +54,9 @@
 	}
 }
 
-* {
-	font-family: 'Jakarta', sans-serif;
+body {
+	font-family: 'Selectric', sans-serif;
+	font-size: var(--type-s);
 }
 
 a {
