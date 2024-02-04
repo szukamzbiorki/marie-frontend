@@ -21,6 +21,18 @@
 		url('/assets/k/WOFF/Karrik-Italic.woff2') format('woff2');
 }
 
+@font-face {
+	font-family: 'Jakarta';
+	font-style: normal;
+	src: url('/assets/j/PlusJakartaSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Jakarta';
+	font-style: italic;
+	src: url('//assets/j/PlusJakartaSans-SemiBoldItalic.ttf') format('truetype');
+}
+
 :root {
 	--type-s: 16px;
 	--type-m: 25px;
@@ -38,7 +50,7 @@
 }
 
 * {
-	font-family: 'Karrik', sans-serif;
+	font-family: 'Jakarta', sans-serif;
 }
 
 a {
