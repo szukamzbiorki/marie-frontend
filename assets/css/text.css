@@ -37,6 +37,10 @@
 	font-family: 'Selectric';
 	src: url('/assets/SelectricUniversOne-Book.otf') format('opentype');
 }
+@font-face {
+	font-family: 'Grot';
+	src: url('/assets/GrotesqueMTStd-Bold.otf') format('opentype');
+}
 
 :root {
 	--type-s: 15px;
@@ -55,7 +59,7 @@
 }
 
 body {
-	font-family: 'Selectric', sans-serif;
+	font-family: 'Grot', sans-serif;
 	font-size: var(--type-s);
 }
 
