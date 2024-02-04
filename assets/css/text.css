@@ -1,59 +1,54 @@
 @font-face {
-  font-family: 'NHGMedium';
-  src: url('/assets/HaasGrotDisp-65Medium.otf') format('opentype');
+	font-family: 'P-A';
+	src: url('/assets/Pirelli-Medium_A.woff') format('woff');
+}
+@font-face {
+	font-family: 'P-B';
+	src: url('/assets/Pirelli-Medium_B.woff') format('woff');
 }
 
 @font-face {
-  font-family: 'NHG';
-  src: url('/assets/HaasGrotDisp-55Roman.otf') format('opentype');
+	font-family: 'Karrik';
+	font-style: normal;
+	src: url('/assets/k/WOFF/Karrik-Regular.woff') format('woff'),
+		url('/assets/k/WOFF/Karrik-Regular.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'J-A';
-  src: url('/assets/Jungka-Medium_A.woff') format('woff');
-}
-@font-face {
-  font-family: 'J-B';
-  src: url('/assets/Jungka-Medium_B.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'P-A';
-  src: url('/assets/Pirelli-Medium_A.woff') format('woff');
-}
-@font-face {
-  font-family: 'P-B';
-  src: url('/assets/Pirelli-Medium_B.woff') format('woff');
+	font-family: 'Karrik';
+	font-style: italic;
+	src: url('/assets/k/WOFF/Karrik-Italic.woff') format('woff'),
+		url('/assets/k/WOFF/Karrik-Italic.woff2') format('woff2');
 }
 
 :root {
-  --type-s: 16px;
-  --type-m: 25px;
-  --type-l: max(3.4vw, 35px);
-  --type-xl: 6vw;
+	--type-s: 16px;
+	--type-m: 25px;
+	--type-l: max(3.4vw, 35px);
+	--type-xl: 6vw;
 }
 
 @media screen and (max-width: 600px) {
-  :root {
-    --type-s: 13px;
-    --type-m: 4.5vw;
-    --type-l: 6.5vw;
-    --type-xl: 9vw;
-  }
+	:root {
+		--type-s: 13px;
+		--type-m: 4.5vw;
+		--type-l: 6.5vw;
+		--type-xl: 9vw;
+	}
 }
 
 * {
-  font-family: 'P-A', 'P-B', sans-serif;
+	font-family: 'Karrik', sans-serif;
 }
 
 a {
-  color: black;
-  text-decoration: none;
+	color: black;
+	text-decoration: none;
 
-  &:hover {
-    color: black;
-    & > * {
-      color: black;
-    }
-  }
+	&:hover {
+		color: black;
+		& > * {
+			color: black;
+		}
+	}
 }
