@@ -50,7 +50,6 @@
 	.grid {
 		margin-top: 10vh;
 		padding: var(--space-m);
-		background-color: var(--color);
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-m);
@@ -130,10 +129,10 @@
 	}
 
 	.image {
-		grid-column: span 6 !important;
+		grid-column: span 3 !important;
 
 		@media screen and (max-width: 600px) {
-			grid-column: span 2 !important;
+			grid-column: span 1 !important;
 		}
 
 		grid-row: 1 / span 1;

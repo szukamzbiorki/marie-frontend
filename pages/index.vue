@@ -43,7 +43,7 @@
 	.grid {
 		margin-top: 10vh;
 		padding: var(--space-m);
-		background-color: var(--color);
+		background-color: var(--grey);
 		display: flex;
 		flex-direction: column;
 		gap: var(--space-m);
