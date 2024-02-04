@@ -128,7 +128,7 @@
 	}
 
 	.image {
-		grid-column: span 3 !important;
+		grid-column: span 2 !important;
 
 		@media screen and (max-width: 600px) {
 			grid-column: span 1 !important;
