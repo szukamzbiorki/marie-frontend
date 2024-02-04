@@ -37,7 +37,7 @@
 	.item {
 		display: flex;
 		flex-direction: column;
-		padding: var(--space-s) 0 var(--space-s) var(--space-m);
+		padding: var(--space-m) 0 var(--space-s) var(--space-m);
 		gap: var(--space-s) var(--space-m);
 		background-color: var(--grey);
 		grid-column: 1/-1;
