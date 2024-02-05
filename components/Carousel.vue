@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div v-else-if="mobile" class="images">
-			<div v-for="image in content.images" :key="image._id" class="slide">
+			<div v-for="image in imagesMobile" :key="image._id" class="slide">
 				<Media class="swiperimg" :medium="image"></Media>
 			</div>
 		</div>
@@ -40,6 +40,12 @@
 	const props = defineProps({
 		content: Object,
 	})
+
+	const imagesMobile = computed(() => {
+		return props.content.images.filter((e) => e.mobile != false)
+	})
+
+	console.log(imagesMobile.value)
 
 	const spaces = new Map([
 		['0', '-m-b-0'],
