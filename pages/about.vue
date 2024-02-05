@@ -138,9 +138,10 @@
 
 	.image {
 		grid-column: span 2 !important;
-
+		width: 183px;
 		@media screen and (max-width: 600px) {
 			grid-column: span 1 !important;
+			width: auto;
 		}
 
 		grid-row: 1 / span 1;
