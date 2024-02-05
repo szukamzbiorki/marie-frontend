@@ -15,6 +15,9 @@
 				<div class="phone" v-if="data.about.phone">
 					{{ data.about.phone }}
 				</div>
+				<a class="instagram" :href="`https://instagram.com/marie9ert`">
+					@marie9ert
+				</a>
 				<div class="description">
 					{{ data.about.about }}
 				</div>
