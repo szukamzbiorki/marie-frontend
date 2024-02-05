@@ -148,7 +148,8 @@
 		white-space: pre-wrap;
 	}
 
-	.email {
+	.email,
+	.instagram {
 		grid-column: 1 / span 3 !important;
 
 		@media screen and (max-width: 600px) {

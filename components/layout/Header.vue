@@ -60,6 +60,7 @@
 				height: calc(10vh - (var(--space-m)));
 				z-index: 4;
 				filter: contrast(100%);
+				width: auto;
 			}
 
 			@media (hover: hover) {
