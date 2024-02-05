@@ -1,26 +1,24 @@
 <script setup>
-  const query = groq`*[_type == "home"]{logo{asset->{url}}}[0]`
-  const sanity = useSanity()
-  const { data } = await useAsyncData(() => sanity.fetch(query))
+	const query = groq`*[_type == "home"]{logo{asset->{url}}}[0]`
+	const sanity = useSanity()
+	const { data } = await useAsyncData(() => sanity.fetch(query))
 
-  const { mobile } = useScreenSize()
-  const ready = ref(false)
-  onMounted(async () => {
-    await document.fonts.ready
-    ready.value = true
-  })
+	const { mobile } = useScreenSize()
+	const ready = ref(false)
+	onMounted(async () => {
+		await document.fonts.ready
+		ready.value = true
+	})
 </script>
 
 <template>
-  <div :class="['layout', { ready }]">
-    <slot />
-    <!-- <LayoutFooter></LayoutFooter> -->
-  </div>
+	<div :class="['layout', { ready }]">
+		<slot />
+	</div>
 </template>
 
 <style lang="postcss">
-  .layout {
-    background-color: white;
-    /* z-index: -2; */
-  }
+	.layout {
+		background-color: white;
+	}
 </style>

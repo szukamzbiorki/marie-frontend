@@ -18,7 +18,11 @@
 		layout: 'default',
 	})
 
-	new BugController({ minBugs: 1, maxBugs: 1, mouseOver: 'fly' })
+	onMounted(() => {
+		setTimeout(() => {
+			new BugController({ minBugs: 1, maxBugs: 1, mouseOver: 'fly' })
+		}, 10000)
+	})
 
 	useHead({})
 	useSeoMeta({})

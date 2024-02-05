@@ -1,50 +1,80 @@
 <template>
-  <div class="header">
-    <NuxtLink to="/about" class="name"
-      ><span class="about">About&nbsp;</span>Marie Gertsen</NuxtLink
-    >
-    <!-- <div class="position">Thanks for connecting from {{ results }}</div> -->
-  </div>
+	<div class="header">
+		<div class="name">Marie Gertsen</div>
+		<NuxtLink to="/about" class="info"
+			><div>Info</div>
+			<img src="/assets/brev.webp" alt="" srcset="" />
+		</NuxtLink>
+	</div>
 </template>
 
 <script setup>
-  import { useIdle } from '@vueuse/core'
+	import { useIdle } from '@vueuse/core'
 
-  const { idle, lastActive } = useIdle(3 * 1000) // 10 sec
-  const now = useTimestamp({ interval: 1000 })
+	const { idle, lastActive } = useIdle(3 * 1000) // 10 sec
+	const now = useTimestamp({ interval: 1000 })
 
-  import { useGeolocation } from '@vueuse/core'
+	import { useGeolocation } from '@vueuse/core'
 
-  const { coords, locatedAt, error } = useGeolocation()
+	const { coords, locatedAt, error } = useGeolocation()
 
-  const idledFor = computed(() =>
-    Math.floor((now.value - lastActive.value) / 1000)
-  )
+	const idledFor = computed(() =>
+		Math.floor((now.value - lastActive.value) / 1000)
+	)
 </script>
 
 <style lang="postcss" scoped>
-  .header {
-    position: fixed;
-    top: 0;
-    padding: var(--space-m);
-    z-index: 1100;
-    & > .name {
-      display: inline-block;
-      display: flex;
-      flex-direction: row;
-      position: relative;
-      & > .about {
-        display: inline-block;
-        max-width: 0px;
-        overflow: hidden;
-        transition: max-width 0.5s;
-      }
-    }
+	.header {
+		position: fixed;
+		top: 0;
+		padding: var(--space-m);
+		z-index: 1100;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		& > * {
+			display: inline-block;
+		}
 
-    &:hover {
-      & > .name > .about {
-        max-width: 80px;
-      }
-    }
-  }
+		& > .name {
+			cursor: default;
+			user-select: none;
+		}
+
+		& > .info {
+			display: flex;
+			flex-direction: row;
+			& > div {
+				padding-right: var(--space-m);
+				transform: translateX(115%);
+				transition: transform ease-in-out 0.4s;
+				user-select: none;
+
+				@media screen and (max-width: 600px) {
+					transform: translateX(0);
+					display: none;
+				}
+			}
+			& > img {
+				height: calc(10vh - (var(--space-m)));
+				z-index: 4;
+				filter: contrast(100%);
+			}
+
+			@media (hover: hover) {
+				&:hover {
+					& > div {
+						transform: translateX(0);
+					}
+				}
+			}
+		}
+
+		&:hover {
+			& > .name > .about {
+				max-width: 80px;
+			}
+		}
+	}
 </style>

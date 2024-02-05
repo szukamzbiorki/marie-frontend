@@ -6,9 +6,15 @@
 				<a class="email" :href="`mailto:${data.about.email}`">{{
 					data.about.email
 				}}</a>
-				<a class="phone" :href="`tel:${data.about.phone}`">{{
-					data.about.phone
-				}}</a>
+				<!-- <a
+					class="phone"
+					v-if="data.about.phone"
+					:href="`tel:${data.about.phone}`"
+					>{{ data.about.phone }}</a
+				> -->
+				<div class="phone" v-if="data.about.phone">
+					{{ data.about.phone }}
+				</div>
 				<div class="description">
 					{{ data.about.about }}
 				</div>
