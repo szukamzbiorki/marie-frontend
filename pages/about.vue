@@ -118,11 +118,12 @@
 	}
 
 	.content > div,
-	a {
+	a,
+	.instagram {
 		grid-column: span 3;
 
 		@media screen and (max-width: 600px) {
-			grid-column: span 1;
+			grid-column: 1 / span 1;
 		}
 	}
 
@@ -148,8 +149,7 @@
 		white-space: pre-wrap;
 	}
 
-	.email,
-	.instagram {
+	.email {
 		grid-column: 1 / span 3 !important;
 
 		@media screen and (max-width: 600px) {
