@@ -25,8 +25,10 @@
 					>Credits</span
 				>
 				<span v-if="credits" class="credits"
-					>Code: <a href="https://bartekp.info">Bartek Pierściński</a>
-					<!-- Typeface: "Pirelli" by<a href="https://j-ltf.com">Jung-Lee Type Foundry</a> -->
+					>Code: <a href="https://bartekp.info">Bartek Pierściński</a
+					><br />Typeface: Karrik by Jean-Baptiste Morizot, Lucas Le Bihan.
+					Distributed by
+					<a href="https://velvetyne.fr">velvetyne.fr</a>
 				</span>
 				<Media class="image" :medium="data.about.image"></Media>
 			</div>
