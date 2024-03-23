@@ -86,7 +86,7 @@
 			overflow: hidden;
 			color: grey;
 			white-space: pre-wrap;
-			height: 0;
+			height: auto;
 			transition: height 0.43s ease-in-out;
 			& > .text {
 				overflow: hidden;
@@ -95,7 +95,7 @@
 		@media screen and (max-width: 600px) {
 			& > .desc {
 				width: calc((100vw - 2 * var(--space-m)));
-				height: v-bind(height);
+				/* height: v-bind(height); */
 			}
 		}
 
@@ -118,7 +118,7 @@
 				}
 
 				& > .desc {
-					height: v-bind(realHeight);
+					/* height: v-bind(realHeight); */
 				}
 
 				& > .ani {

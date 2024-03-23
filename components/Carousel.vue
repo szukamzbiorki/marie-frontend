@@ -124,8 +124,10 @@
 	}
 	.swiper {
 		width: 100vw;
-		max-width: 100vw;
+		max-width: calc(100vw - 4 * var(--space-m));
 		background-color: var(--grey);
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	.swiper-wrapper {
@@ -141,7 +143,6 @@
 		width: auto;
 		margin-right: var(--space-m);
 		background-color: var(--grey);
-
 		&:last-child {
 			margin-right: 20vw;
 		}

@@ -2,8 +2,8 @@
 	<div class="header">
 		<div class="name">Marie Gertsen</div>
 		<NuxtLink to="/about" class="info"
-			><div>Info</div>
-			<img src="/assets/brev.webp" alt="" srcset="" />
+			>Info
+			<!-- <img src="/assets/brev.webp" alt="" srcset="" /> -->
 		</NuxtLink>
 	</div>
 </template>

@@ -18,7 +18,7 @@
 				<a class="instagram" :href="`https://instagram.com/marie9ert`">
 					@marie9ert
 				</a>
-				<div class="description">
+				<div v-if="data.about.about != '.'" class="description">
 					{{ data.about.about }}
 				</div>
 				<span @click="credits = true" v-if="!credits" class="credits but"
