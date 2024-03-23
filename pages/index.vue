@@ -19,9 +19,9 @@
 	})
 
 	onMounted(() => {
-		setTimeout(() => {
-			new BugController({ minBugs: 1, maxBugs: 1, mouseOver: 'fly' })
-		}, 10000)
+		// setTimeout(() => {
+		// 	new BugController({ minBugs: 1, maxBugs: 1, mouseOver: 'fly' })
+		// }, 10000)
 	})
 
 	useHead({})
