@@ -34,8 +34,7 @@
 	}
 	.grid {
 		margin-top: 10vh;
-		padding: var(--space-m);
-		padding-left: 0;
+		padding: var(--space-m) 0;
 		background-color: white;
 		display: flex;
 		flex-direction: column;

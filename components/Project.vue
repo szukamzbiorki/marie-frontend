@@ -43,7 +43,7 @@
 		grid-column: 1/-1;
 		grid-row: 1/2;
 		cursor: default;
-		width: calc(100vw - 2 * (var(--space-m)));
+		width: calc(100vw);
 		@media screen and (max-width: 600px) {
 			margin-bottom: calc(3 * var(--space-m));
 			padding: 0;
