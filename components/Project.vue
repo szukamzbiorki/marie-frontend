@@ -47,6 +47,7 @@
 		@media screen and (max-width: 600px) {
 			margin-bottom: calc(3 * var(--space-m));
 			padding: 0;
+			padding-left: var(--space-m);
 		}
 
 		& > .ani {
